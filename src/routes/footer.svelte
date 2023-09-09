@@ -10,12 +10,13 @@
     footer {
         width: 100%;
         padding-block: var(--size-7);
-        border-top: 1px solid var(--gray-4);
+        border-top: 1px solid var(--border);
     }
 
     p {
         text-align: center;
-        color: var(--text-2);
+        color: var(--text);
+        /* color: var(--text-2); */
     }
 </style>
 

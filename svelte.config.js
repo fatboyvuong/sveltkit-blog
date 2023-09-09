@@ -21,7 +21,7 @@ const mdsvexOptions = {
 			return `{@html \`${html}\` }`;
 		},
 	},
-	remarkPlugins: [remarkUnwrapImages, [remarkToc, {}]],
+	remarkPlugins: [remarkUnwrapImages, remarkToc],
 	rehypePlugins: [rehypeSlug],
 };
 

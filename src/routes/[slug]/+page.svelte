@@ -5,9 +5,9 @@
     export let data;
 </script>
 
-<pre>
+<!-- <pre>
     {JSON.stringify(data)}
-</pre>
+</pre> -->
 
 <svelte:head>
     <title>{data.meta.title}</title>
@@ -36,13 +36,18 @@
         /* max-inline-size: var(--size-3); */
         margin-inline: auto;
     }
+    h1 {
+        color: var(--text);
+    }
+    .prose {
+        color: var(--text);
+    }
     .tags {
         display: flex;
         gap: var(--size-3);
         margin-top: var(--size-7);
         margin-bottom: var(--size-3);
     }
-
     .tag {
         padding: var(--size--2) var(--size-3);
         border-radius: var(--size--1);

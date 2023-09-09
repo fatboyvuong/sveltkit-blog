@@ -29,11 +29,14 @@
     .layout {
         /* height: 100%; */
         height: 100vh;
-        max-inline-size: 1440px;
+        /* width: 100vh; */
+        /* max-inline-size: 1440px; */
         display: grid;
         grid-template-rows: auto 1fr auto;
         margin-inline: auto;
         padding-inline: var(--size-7);
+        background-color: var(--background);
+        color: var(--text);
     }
 
     main {

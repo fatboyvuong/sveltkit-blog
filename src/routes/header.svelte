@@ -30,6 +30,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        color: var(--text);
     }
 
     nav {
@@ -42,12 +43,20 @@
     }
 
     a {
-        color: inherit;
+        color: var(--text);
         text-decoration: none;
     }
 
     ul {
         list-style-type: none;
+    }
+
+    h4 {
+        color: --var(--text);
+    }
+
+    .title {
+        color: --var(--text) !important;
     }
 
     @media (min-width: 768px) {
