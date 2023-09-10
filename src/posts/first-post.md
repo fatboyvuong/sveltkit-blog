@@ -5,7 +5,6 @@ date: '2023-09-04'
 categories:
     - svelte
     - blog
-    - personal
 published: true
 ---
 

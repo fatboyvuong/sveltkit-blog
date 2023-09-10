@@ -23,7 +23,9 @@
     <div class="tags">
         {#each data.meta.categories as category }
             <!-- Can add link to categories for new page list of related posts -->
-            <span class="tag surface-4">&num;{category} </span>
+            <a class="tag-link" href={`/?tagName=${category}`}>
+                <span class="tag surface-4">&num;{category} </span>
+            </a>
         {/each}
     </div>
     <div class="prose">

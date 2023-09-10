@@ -8,11 +8,8 @@ async function getPosts(limit?: number) {
 		eager: true
 	});
 
-	console.log(paths)
-
 	for (const path in paths) {
 		const file = paths[path];
-		console.log(file);
 		const slug = path.split('/').at(-1)?.replace('.md', '');
 
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
@@ -29,7 +26,18 @@ async function getPosts(limit?: number) {
 	return posts;
 }
 
-export async function GET() {
+async function getPostsByTag(tagName: string) {
 	const posts = await getPosts();
+	return posts.filter(post => post.categories.includes(tagName));
+}
+
+export async function GET({ url }) {
+	let posts: any;
+	if (url.searchParams.has('tagName')) {
+		const tagName = url.searchParams.get('tagName');
+		posts = await getPostsByTag(tagName || '');
+	} else {
+		posts = await getPosts();
+	}
 	return json(posts);
 }
