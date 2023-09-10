@@ -35,7 +35,7 @@
     }
 
     .post:not(:last-child) {
-        border-bottom: 1px solid var(--gray-4);
+        border-bottom: 1px solid var(--border);
         padding-bottom: var(--size-7);
     }
 

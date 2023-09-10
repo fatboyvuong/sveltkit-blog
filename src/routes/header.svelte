@@ -6,22 +6,22 @@
 <div class="header-wrapper">
     <nav>
         <a href="/" class="title">
-           <h4>{config.title}</h4>
+           <h3 class="h3">{config.title}</h3>
         </a>
     </nav>
-    
-    <ul class="links">
-        <li>
-            <a href="/about">About</a>
-        </li>
-        <li>
-            <a href="/contact">Contact</a>
-        </li>
-        <!-- <li>
-            <a href="/rss.xml" target="_blank">RSS</a>
-        </li> -->
-    </ul>
-    <!-- <button>Toggle</button> -->
+
+    <!-- classs='list-nav' work for vertical -->
+    <nav> 
+        <ul class="links">
+            <li>
+                <a href="/about">About</a>
+            </li>
+            <li>
+                <a href="/contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
     <Toggle />
 </div>
 

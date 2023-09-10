@@ -13,23 +13,23 @@ const mdsvexOptions = {
 	// 	_: './src/mdsvex.svelte', // layout for article
 	// },
 	highlight: {
-		highlighter: async(code, lang = 'text') => {
+		highlighter: async (code, lang = 'text') => {
 			const highlighter = await shiki.getHighlighter({
-				theme: 'github-dark',
+				theme: 'github-dark'
 			});
-			const html = escapeSvelte(highlighter.codeToHtml(code, {lang}));
+			const html = escapeSvelte(highlighter.codeToHtml(code, { lang }));
 			return `{@html \`${html}\` }`;
-		},
+		}
 	},
 	remarkPlugins: [remarkUnwrapImages, remarkToc],
-	rehypePlugins: [rehypeSlug],
+	rehypePlugins: [rehypeSlug]
 };
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	extensions: ['.svelte', '.md', '.svx'],
 	// preprocess: [vitePreprocess(), mdsvex()],
-	preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)], // with option make error
+	preprocess: [vitePreprocess({}), mdsvex(mdsvexOptions)], // with option make error
 	// preprocess: [vitePreprocess()],
 	kit: {
 		adapter: adapter()

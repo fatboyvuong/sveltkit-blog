@@ -23,7 +23,9 @@
     <div class="tags">
         {#each data.meta.categories as category }
             <!-- Can add link to categories for new page list of related posts -->
-            <span class="tag surface-4">&num;{category} </span>
+            <a class="anchor" href={`/posts/${category}`}>
+                <span class="badge variant-filled-warning">&num;{category} </span>
+            </a>
         {/each}
     </div>
     <div class="prose">
@@ -48,9 +50,9 @@
         margin-top: var(--size-7);
         margin-bottom: var(--size-3);
     }
-    .tag {
+    /* .tag {
         padding: var(--size--2) var(--size-3);
         border-radius: var(--size--1);
         background-color: var(--black-1);
-    }
+    } */
 </style>

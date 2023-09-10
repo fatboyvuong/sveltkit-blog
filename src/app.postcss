@@ -1,0 +1,78 @@
+/* Write your global styles here, in PostCSS syntax */
+
+@tailwind base;
+
+.prose:is(h1, h2, h3, h4, h5, h6) {
+	margin-top: 15px;
+	color: var(--text);
+}
+
+html {
+	--text-dark: var(--gray-2);
+	--background-dark: var(--gray-12);
+	--border-dark: var(--gray-6);
+
+	--text-light: var(--gray-12);
+	--background-light: var(--gray-2);
+	--border-light: var(--gray-4);
+	/* background-color: var(--text) !important; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--text);
+}
+
+:root {
+	color-scheme: light;
+	--text: var(--text-light);
+	--background: var(--background-light);
+	--theme-font-family-base: 'Manrope', sans-serif;
+	--theme-font-family-heading: "JetBrains Mono" sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		font-family: "JetBrains Mono" sans-serif;
+		background-color: var(--background-dark);
+	}
+	:root {
+		color-scheme: dark;
+
+		--text: var(--text-dark);
+		--background: var(--background-dark);
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	html {
+		background-color: var(--background-light);
+	}
+	:root {
+		color-scheme: light;
+
+		--text: var(--text-light);
+		--background: var(--background-light);
+	}
+}
+
+[color-scheme='dark'] {
+	/* Dark theme */
+	--text: var(--text-dark);
+	--background: var(--background-dark);
+	--border: var(--border-dark);
+}
+
+[color-scheme='light'] {
+	--text: var(--text-light);
+	--background: var(--background-light);
+	--border: var(--border-light);
+}
+
+@tailwind components;
+
+@tailwind utilities;
